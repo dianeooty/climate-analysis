@@ -61,7 +61,7 @@ def index():
     </form>
     """
 
-
+# Route for All Measurements
 @app.route("/api/v1.0/measurements")
 def measurement():
     # Create our session (link) from Python to the DB
@@ -86,7 +86,7 @@ def measurement():
 
     return jsonify(all_measurements)
 
-
+# Route for previous 12 months Precipitation
 @app.route("/api/v1.0/precipitation")
 def precipitation():
     # Create our session (link) from Python to the DB
@@ -110,6 +110,7 @@ def precipitation():
     return jsonify(all_prcp)
 
 
+# Route for All Stations
 @app.route("/api/v1.0/stations")
 def station():
     # Create our session (link) from Python to the DB
@@ -136,6 +137,7 @@ def station():
     return jsonify(all_stations)
 
 
+# Route for previous 12 months Temperature of most active station
 @app.route("/api/v1.0/tobs")
 def tobs():
     # Create our session (link) from Python to the DB
@@ -164,6 +166,7 @@ def tobs():
     return jsonify(all_tobs)
 
 
+# Route for startdate and/or enddate inputs with 'GET' method
 @app.route("/api/v1.0/temperature", methods=['GET'])
 def temperature():
 
@@ -174,6 +177,7 @@ def temperature():
     startdate = request.args["startdate"]
     enddate = request.args["enddate"]
 
+    # Print startdate and/or enddate to terminal
     print("\n=================================================")
     print(f"startdate: {startdate}    enddate: {enddate}")
     print("=================================================\n")
@@ -183,6 +187,8 @@ def temperature():
     sql = [func.min(Measurements.tobs), func.avg(
         Measurements.tobs), func.max(Measurements.tobs)]
 
+    session.close()
+    
     if not enddate:
         # Calculate TMIN, TAVG, TMAX for dates greater than start
         results = session.query(*sql).\
