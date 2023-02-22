@@ -59,7 +59,7 @@ Base = automap_base()
 # Reflect the tables
 Base.prepare(autoload_with=engine)
 
-# Save reference to table
+# Save references to tables
 Measurements = Base.classes.measurement
 Stations = Base.classes.station
 
@@ -178,7 +178,7 @@ def station():
     return jsonify(all_stations)
 
 
-# Route for previous 12 months Temperature of most active station
+# Route for previous 12 months Temperatures of most active station
 @app.route("/api/v1.0/tobs")
 def tobs():
     # Create our session (link) from Python to the DB
@@ -207,7 +207,7 @@ def tobs():
     return jsonify(all_tobs)
 
 
-# Route for startdate and/or enddate inputs
+# Route for startdate and/or enddate inputs with 'GET' method
 @app.route("/api/v1.0/temperature", methods=['GET'])
 def temperature():
 
@@ -218,6 +218,7 @@ def temperature():
     startdate = request.args["startdate"]
     enddate = request.args["enddate"]
 
+    # Print startdate and/or enddate to terminal
     print("\n=================================================")
     print(f"startdate: {startdate}    enddate: {enddate}")
     print("=================================================\n")
@@ -227,6 +228,8 @@ def temperature():
     sql = [func.min(Measurements.tobs), func.avg(
         Measurements.tobs), func.max(Measurements.tobs)]
 
+    session.close()
+    
     if not enddate:
         # Calculate TMIN, TAVG, TMAX for dates greater than start
         results = session.query(*sql).\
@@ -246,8 +249,6 @@ def temperature():
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-
 
 ```
 
