@@ -35,7 +35,7 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     """List all available api routes."""
-    return """HAWAII WEATHER<br>
+    return """HAWAII CLIMATE<br>
     <br>
     All Measurements:
     <br><a href="/api/v1.0/measurements">Measurements (JSON)</a><br>
