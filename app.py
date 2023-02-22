@@ -46,7 +46,7 @@ def index():
     Stations Data:   
     <br><a href="/api/v1.0/stations">Stations (JSON)</a><br>
     <br>
-    Most Active Station Data for the last year:
+    Most Active Station Temperature Data for the last year:
     <br><a href="/api/v1.0/tobs">USC00519281 Tobs (JSON)</a><br>
     <br>
     Start Date and/or End Date (min, max, avg temperatures):<br>
