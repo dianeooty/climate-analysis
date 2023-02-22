@@ -5,15 +5,12 @@ This is my Module 10 Challenge for my Data Analytics and Visualization Boot Camp
 ## Table of Contents
 * [General Info](#general-information)
 * [Technologies Used](#technologies-used)
-* [Features](#features)
 * [Screenshots](#screenshots)
 * [Setup](#setup)
 * [Usage](#usage)
 * [Project Status](#project-status)
-* [Room for Improvement](#room-for-improvement)
 * [Acknowledgements](#acknowledgements)
 * [Contact](#contact)
-<!-- * [License](#license) -->
 
 
 ## General Information
@@ -29,8 +26,9 @@ Afterwards, I used Flask API to create a climate app of the queries.
 
 
 ## Screenshots
-![Example screenshot](./img/screenshot.png)
-<!-- If you have screenshots you'd like to share, include them here. -->
+![1](https://user-images.githubusercontent.com/117790100/220489017-6c8a5ffd-eb6b-4c90-b152-061367ec90d9.png)
+![2](https://user-images.githubusercontent.com/117790100/220489025-75ff3d05-1def-4222-834b-2a50c5c5c23b.png)
+![3](https://user-images.githubusercontent.com/117790100/220489034-7405a933-4280-4b05-b536-f5f0163d7c7b.png)
 
 
 ## Setup
