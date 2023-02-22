@@ -249,7 +249,7 @@ if __name__ == '__main__':
 
 
 ## Project Status
-Project is complete and no longer being worked on/
+Project is complete and no longer being worked on.
 
 
 ## Acknowledgements
