@@ -14,7 +14,7 @@ This is my Module 10 Challenge for my Data Analytics and Visualization Boot Camp
 
 
 ## General Information
-Using SqlAlchemy, I analyzed and explored the climate data for Hawaii. I retrieved the precipitation data for the previous 12 months, filtered the stations for the most active and completed a query for the previous 12 months temperature observations for the most active station. In addition, I plotted the precipitation and temperate data.
+Using SqlAlchemy, I analyzed and explored the climate data for Hawaii. I retrieved the precipitation data for the previous 12 months, filtered the stations for the most active and completed a query for the previous 12 months temperature observations for the most active station. In addition, I plotted the precipitation and temperature data.
 Afterwards, I used Flask API to create a climate app of the queries.
 
 
@@ -36,7 +36,7 @@ The climate data used in the analysis can be found in the resources folder.
 
 
 ## Usage
-Please see the code below to analyze and explore the climate data through the climate app.
+Please see the code below to analyze and explore the climate data through the climate app.  On the landing page, start dates and/or end dates can be entered for the minimum, maximum and average temperatures of the data for the selected date range.
 
 ```
 import numpy as np
