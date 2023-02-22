@@ -18,7 +18,7 @@ Base = automap_base()
 # Reflect the tables
 Base.prepare(autoload_with=engine)
 
-# Save reference to table
+# Save references to tables
 Measurements = Base.classes.measurement
 Stations = Base.classes.station
 
@@ -137,7 +137,7 @@ def station():
     return jsonify(all_stations)
 
 
-# Route for previous 12 months Temperature of most active station
+# Route for previous 12 months Temperatures of most active station
 @app.route("/api/v1.0/tobs")
 def tobs():
     # Create our session (link) from Python to the DB
