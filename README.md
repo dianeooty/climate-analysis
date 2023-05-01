@@ -1,5 +1,5 @@
-# sqlalchemy-challenge
-This is my Module 10 Challenge for my Data Analytics and Visualization Boot Camp. I was tasked with completing a climate analysis for Hawaii.
+# climate-analysis
+For this project, I was tasked with completing a climate analysis for Hawaii.
 
 
 ## Table of Contents
